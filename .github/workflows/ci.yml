@@ -50,4 +50,4 @@ jobs:
         run: poetry run mypy src
 
       - name: Run Pytest (Unit Tests)
-        run: poetry run pytest
+        run: poetry run pytest --cov=hello_world --cov-fail-under=100

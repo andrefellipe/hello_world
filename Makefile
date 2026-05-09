@@ -14,7 +14,7 @@ typecheck:
 	poetry run mypy src
 
 test:
-	poetry run pytest
+	poetry run pytest --cov=hello_world --cov-report=term-missing --cov-fail-under=100
 
 mutate:
 	poetry run mutmut run
