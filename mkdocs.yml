@@ -1,0 +1,6 @@
+site_name: Hello World Documentation
+theme:
+  name: material
+plugins:
+  - search
+  - mkdocstrings
