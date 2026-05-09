@@ -1,7 +1,7 @@
 [project]
 name = "hello-world-andrefellipe"
 version = "0.1.0"
-description = ""
+description = "A state-of-the-art Python package boilerplate."
 authors = [
     {name = "Andre Fellipe",email = "andrefellipern@gmail.com"}
 ]
