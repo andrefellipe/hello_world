@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/andrefellipe/hello_world/compare/v0.1.1...v0.1.2) (2026-05-09)
+
+
+### Documentation
+
+* add contributing guidelines, issue templates, and readme badges ([cf69773](https://github.com/andrefellipe/hello_world/commit/cf69773ada7270a0daf7d400f789274725d96f20))
+
 ## [0.1.1](https://github.com/andrefellipe/hello_world/compare/v0.1.0...v0.1.1) (2026-05-09)
 
 
