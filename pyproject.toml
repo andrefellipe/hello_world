@@ -6,7 +6,7 @@ authors = [
     {name = "Andre Fellipe",email = "andrefellipern@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<4.0"
 dependencies = [
 ]
 
@@ -28,7 +28,8 @@ dev = [
     "nox-poetry (>=1.2.0,<2.0.0)",
     "mkdocs-material (>=9.7.6,<10.0.0)",
     "mkdocstrings (>=1.0.4,<2.0.0)",
-    "mkdocstrings-python (>=2.0.3,<3.0.0)"
+    "mkdocstrings-python (>=2.0.3,<3.0.0)",
+    "mutmut (>=3.5.0,<4.0.0)"
 ]
 
 [tool.ruff]

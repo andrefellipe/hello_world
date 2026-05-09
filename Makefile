@@ -1,4 +1,4 @@
-.PHONY: install format lint typecheck test clean
+.PHONY: install format lint typecheck test mutate clean
 
 install:
 	poetry install
@@ -15,6 +15,9 @@ typecheck:
 
 test:
 	poetry run pytest
+
+mutate:
+	poetry run mutmut run
 
 clean:
 	rm -rf .venv
