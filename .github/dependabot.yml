@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # 1. Keep your GitHub Actions workflows updated
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "ci"
+
+  # 2. Keep your Python packages (Poetry) updated
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "python"
