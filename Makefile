@@ -1,4 +1,4 @@
-.PHONY: help setup install format lint typecheck test validate clean mutate
+.PHONY: help setup install format lint typecheck test validate matrix clean mutate
 
 .DEFAULT_GOAL := help
 
@@ -27,11 +27,15 @@ test: ## Run Pytest with 100% coverage enforcement and XML reporting
 
 validate: format lint typecheck test ## Run the complete local CI pipeline (format, lint, typecheck, test)
 
+matrix: ## Run the test suite across all supported Python versions using Nox
+	poetry run nox
+
 clean: ## Remove virtual environments, cache directories, and build artifacts
 	rm -rf .venv
 	rm -rf .pytest_cache
 	rm -rf .ruff_cache
 	rm -rf .mypy_cache
+	rm -rf .nox
 	rm -f .coverage coverage.xml
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 
