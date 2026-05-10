@@ -1,9 +1,13 @@
-.PHONY: help install format lint typecheck test clean mutate
+.PHONY: help setup install format lint typecheck test clean mutate
 
 .DEFAULT_GOAL := help
 
 help: ## Show this help menu
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+
+setup: install ## Bootstrap the local development environment (installs dependencies and git hooks)
+	poetry run pre-commit install
+	poetry run pre-commit install --hook-type commit-msg
 
 install: ## Install the project dependencies using Poetry
 	poetry install
