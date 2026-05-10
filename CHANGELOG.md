@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/andrefellipe/hello_world/compare/v0.2.1...v0.2.2) (2026-05-10)
+
+
+### Bug Fixes
+
+* replace typing_extensions with standard library typing and resolve typer dependency warning ([27b4ff0](https://github.com/andrefellipe/hello_world/commit/27b4ff085d3609b758e775eac292b747869b6f65))
+
 ## [0.2.1](https://github.com/andrefellipe/hello_world/compare/v0.2.0...v0.2.1) (2026-05-10)
 
 
