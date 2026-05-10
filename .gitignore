@@ -8,3 +8,4 @@ dist/
 mutants/
 .coverage
 dump_code.sh
+coverage.xml
