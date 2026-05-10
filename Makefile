@@ -1,4 +1,4 @@
-.PHONY: help setup install format lint typecheck test validate matrix clean mutate
+.PHONY: help setup install format lint typecheck test audit validate matrix clean mutate
 
 .DEFAULT_GOAL := help
 
@@ -25,7 +25,10 @@ typecheck: ## Run Mypy for strict static type checking
 test: ## Run Pytest with 100% coverage enforcement and XML reporting
 	poetry run pytest --cov=hello_world --cov-report=term-missing --cov-report=xml --cov-fail-under=100
 
-validate: format lint typecheck test ## Run the complete local CI pipeline (format, lint, typecheck, test)
+audit: ## Run pip-audit to scan dependencies for known security vulnerabilities
+	poetry run pip-audit
+
+validate: format lint typecheck test audit ## Run the complete local CI pipeline
 
 matrix: ## Run the test suite across all supported Python versions using Nox
 	poetry run nox
