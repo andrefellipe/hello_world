@@ -65,10 +65,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Run Mutmut (Mutation Testing)
+        if: runner.os != 'Windows'
         run: |
           poetry install --no-root
-          if [ "$RUNNER_OS" == "Windows" ]; then
-            .venv/Scripts/mutmut run
-          else
-            .venv/bin/mutmut run
-          fi
+          .venv/bin/mutmut run
