@@ -4,8 +4,7 @@ from pathlib import Path
 
 if len(sys.argv) != 3:
     print(
-        "Usage: poetry run python scripts/rename.py "
-        "<snake_case_name> <kebab-case-name>"
+        "Usage: poetry run python scripts/rename.py <snake_case_name> <kebab-case-name>"
     )
     sys.exit(1)
 

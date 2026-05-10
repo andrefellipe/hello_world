@@ -7,3 +7,4 @@ dist/
 *.egg-info/
 mutants/
 .coverage
+dump_code.sh
