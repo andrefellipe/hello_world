@@ -1,3 +1,5 @@
+"""Automation script to instantiate the boilerplate with a new project name."""
+
 import os
 import sys
 from pathlib import Path

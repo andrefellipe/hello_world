@@ -1,3 +1,5 @@
+"""Nox configuration for automated matrix testing."""
+
 from nox_poetry import session
 
 # Define the Python versions we want to support

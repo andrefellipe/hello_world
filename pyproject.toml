@@ -45,9 +45,16 @@ select = [
     "I",  # isort
     "C",  # flake8-comprehensions
     "B",  # flake8-bugbear
+    "D",
+    "S",
 ]
 ignore = []
 
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "S101"]
 [tool.mypy]
 strict = true
 warn_return_any = true
