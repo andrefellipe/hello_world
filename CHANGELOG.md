@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/andrefellipe/hello_world/compare/v0.2.0...v0.2.1) (2026-05-10)
+
+
+### Bug Fixes
+
+* restore mutmut paths and update rename automation to include cfg files ([5d08aa6](https://github.com/andrefellipe/hello_world/commit/5d08aa6448e4682402dfc2e2c1c72705641aa64c))
+
 ## [0.2.0](https://github.com/andrefellipe/hello_world/compare/v0.1.2...v0.2.0) (2026-05-10)
 
 
