@@ -1,4 +1,4 @@
-.PHONY: help setup install format lint typecheck test clean mutate
+.PHONY: help setup install format lint typecheck test validate clean mutate
 
 .DEFAULT_GOAL := help
 
@@ -24,6 +24,8 @@ typecheck: ## Run Mypy for strict static type checking
 
 test: ## Run Pytest with 100% coverage enforcement and XML reporting
 	poetry run pytest --cov=hello_world --cov-report=term-missing --cov-report=xml --cov-fail-under=100
+
+validate: format lint typecheck test ## Run the complete local CI pipeline (format, lint, typecheck, test)
 
 clean: ## Remove virtual environments, cache directories, and build artifacts
 	rm -rf .venv
