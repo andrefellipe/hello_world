@@ -1,7 +1,8 @@
 """Command Line Interface for the hello_world package."""
 
+from typing import Annotated
+
 import typer
-from typing_extensions import Annotated
 
 from hello_world.core import say_hello
 
