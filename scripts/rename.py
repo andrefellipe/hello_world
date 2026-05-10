@@ -29,7 +29,7 @@ print("🔍 Scanning codebase for 'hello_world' and 'hello-world-andrefellipe'..
 for root, dirs, files in os.walk("."):
     dirs[:] = [d for d in dirs if d not in ignore_dirs]
     for file in files:
-        if file.endswith((".py", ".toml", ".md", ".yml", ".yaml", "Makefile")):
+        if file.endswith((".py", ".toml", ".md", ".yml", ".yaml", "Makefile", ".cfg")):
             filepath = Path(root) / file
             try:
                 content = filepath.read_text(encoding="utf-8")
