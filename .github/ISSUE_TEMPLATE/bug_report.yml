@@ -1,0 +1,64 @@
+name: 🐛 Bug Report
+description: Create a report to help us improve the package
+title: "fix: [Short description of the bug]"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        Please ensure you have read the `SECURITY.md` policy. Do not report security vulnerabilities here.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight Checks
+      options:
+        - label: I have searched the existing issues and found no duplicates.
+          required: true
+        - label: I am using the latest version of the package.
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this bug? Please provide a minimal code example if possible.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: dropdown
+    id: python-version
+    attributes:
+      label: Python Version
+      description: Which version of Python are you using?
+      options:
+        - "3.10"
+        - "3.11"
+        - "3.12"
+        - "Other (Specify in Additional Context)"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Ubuntu / Linux
+        - macOS
+        - Windows
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here (e.g., traceback logs).
