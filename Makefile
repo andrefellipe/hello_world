@@ -14,7 +14,7 @@ typecheck:
 	poetry run mypy src
 
 test:
-	poetry run pytest --cov=hello_world --cov-report=term-missing --cov-fail-under=100
+		poetry run pytest --cov=hello_world --cov-report=term-missing --cov-fail-under=100
 
 clean:
 	rm -rf .venv
