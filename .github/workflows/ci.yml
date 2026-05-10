@@ -50,11 +50,8 @@ jobs:
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction
 
-      - name: Run Ruff (Linting & Formatting)
-        run: poetry run ruff check .
-
-      - name: Run Mypy (Type Checking)
-        run: poetry run mypy src
+      - name: Run Pre-Commit (All Quality Gates)
+        run: poetry run pre-commit run --all-files --show-diff-on-failure
 
       - name: Run Pytest (Unit Tests)
         run: poetry run pytest --cov=hello_world --cov-fail-under=100 --cov-report=xml
