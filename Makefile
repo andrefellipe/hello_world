@@ -16,12 +16,15 @@ typecheck:
 test:
 	poetry run pytest --cov=hello_world --cov-report=term-missing --cov-fail-under=100
 
-mutate:
-	poetry run mutmut run
-
 clean:
 	rm -rf .venv
 	rm -rf .pytest_cache
 	rm -rf .ruff_cache
 	rm -rf .mypy_cache
+	rm -f .coverage
 	find . -type d -name "__pycache__" -exec rm -rf {} +
+
+mutate:
+	poetry install --no-root
+	rm -rf mutants/ .coverage
+	.venv/bin/mutmut run; STATUS=$$?; poetry install; exit $$STATUS

@@ -51,3 +51,8 @@ jobs:
 
       - name: Run Pytest (Unit Tests)
         run: poetry run pytest --cov=hello_world --cov-fail-under=100
+
+      - name: Run Mutmut (Mutation Testing)
+        run: |
+          poetry install --no-root
+          .venv/bin/mutmut run
