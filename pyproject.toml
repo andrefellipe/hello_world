@@ -8,6 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10,<4.0"
 dependencies = [
+    "typer[all] (>=0.25.1,<0.26.0)"
 ]
 
 [tool.poetry]
@@ -55,3 +56,6 @@ warn_unused_configs = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[project.scripts]
+hello-world = "hello_world.cli:app"

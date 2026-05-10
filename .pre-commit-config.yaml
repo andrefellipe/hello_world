@@ -18,6 +18,7 @@ repos:
       - id: mypy
         pass_filenames: false
         args: ["src"]
+        additional_dependencies: ["typer"]
 
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v3.27.0
