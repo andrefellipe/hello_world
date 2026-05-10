@@ -59,3 +59,9 @@ pythonpath = ["src"]
 
 [project.scripts]
 hello-world = "hello_world.cli:app"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:"
+]
