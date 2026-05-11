@@ -1,4 +1,4 @@
-.PHONY: help setup install format lint typecheck test audit validate matrix clean mutate
+.PHONY: help setup install format lint typecheck test audit validate matrix clean mutate docs
 
 .DEFAULT_GOAL := help
 
@@ -27,6 +27,9 @@ test: ## Run Pytest with 100% coverage enforcement and XML reporting
 
 audit: ## Run pip-audit to scan dependencies for known security vulnerabilities
 	poetry run pip-audit
+
+docs: ## Serve the documentation locally with live hot-reloading
+	poetry run mkdocs serve --livereload
 
 validate: format lint typecheck test audit ## Run the complete local CI pipeline
 
