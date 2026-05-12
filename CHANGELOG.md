@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/andrefellipe/hello_world/compare/v0.2.2...v0.3.0) (2026-05-11)
+
+
+### Features
+
+* configure ephemeral devcontainer and live documentation server ([d039ae3](https://github.com/andrefellipe/hello_world/commit/d039ae3c426c7455f7f412bc036a714c54c22f7f))
+
 ## [0.2.2](https://github.com/andrefellipe/hello_world/compare/v0.2.1...v0.2.2) (2026-05-10)
 
 
